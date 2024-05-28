@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+  --black: #17171C;
+  --white: #ffffff;
+  --high: #4B5EFC;
+  --medium: #4E505F;
+  --low: #2E2F38;
+  --font: "DM Sans", sans-serif;
+}
+
+.calculadora {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--black);
+}
+
+.historico {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 1rem;
+  flex-grow: 1;
+  overflow: auto;
+  box-sizing: border-box;
+  font-size: 2rem;
+  color: var(--medium);
+}
+
+.campo__calculo {
+  font-size: 3rem;
+  text-align: end;
+  padding: 1rem;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+textarea:focus,
+input:focus,
+select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+
+.teclado {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.tecla {
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+  font-weight: 500;
+  border: none;
+  color: var(--white);
+}
+
+.numero {
+  background-color: var(--low);
+
+  &:active {
+    background-color: var(--medium);
+  }
+}
+
+.active {
+  background-color: var(--medium);
+}
+
+.operacao,
+.calcular {
+  background-color: var(--high);
+}
+
+.apagar,
+.misc {
+  background-color: var(--medium);
+}

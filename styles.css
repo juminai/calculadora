@@ -90,3 +90,32 @@ select:focus {
 .misc {
   background-color: var(--medium);
 }
+
+/* Desktop */
+@media(min-width: 1024px) {
+  .calculadora {
+    width: 500px;
+    margin: auto;
+    justify-content: center;
+  }
+
+  .historico {
+    font-size: 2.5rem;
+  }
+
+  .campo__calculo {
+    font-size: 3.5rem;
+  }
+
+  .teclado {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2rem;
+  }
+
+  .tecla {
+    padding: 1.5rem;
+    font-size: 2.5rem;
+  }
+}
